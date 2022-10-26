@@ -1,0 +1,25 @@
+header {
+    background-color: cornflowerblue;
+    position: relative;
+}
+
+a{
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px;
+}
+
+a:hover{
+    color: cornflowerblue;
+    background-color: aliceblue;
+    text-decoration: underline;
+}
+
+.container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+

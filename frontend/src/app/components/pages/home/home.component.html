@@ -1,0 +1,11 @@
+<ul>
+    <li *ngFor="let ticket of tickets">
+       <a routerLink="/ticket/{{ticket.id}}">
+        <div class="content">
+            <div class="description">
+                {{ticket.description}}
+            </div>
+        </div>
+       </a>
+    </li>
+</ul>
