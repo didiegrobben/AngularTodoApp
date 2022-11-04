@@ -1,0 +1,50 @@
+.container{
+    display: inline-block;
+    margin-left: 50%;
+    margin-top: 100px;
+    transform: translateX(-50%);
+    background-color: whitesmoke;
+    padding: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+
+label{
+    display: inline-block;
+    width: 100%;
+    font-size: medium;
+}
+
+input{
+    display: inline-block;
+    width: 100%;
+    border: 1px solid cornflowerblue;
+    margin: 5px 0;
+    height: 30px;
+   
+}
+
+input::placeholder{
+    font-size: medium;
+    padding: 5px;
+}
+
+button{
+    background-color: white;
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue;
+    font-size: medium;
+    padding: 10px 20px;
+    margin-top: 20px;
+
+}
+
+button:active{
+    background-color: cornflowerblue;
+    color: white;
+}
+
+button:hover{
+    background-color: aliceblue;
+}

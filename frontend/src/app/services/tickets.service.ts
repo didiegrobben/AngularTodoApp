@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { sample_tickets } from 'src/data';
+import { Observable } from 'rxjs';
+import { TICKETS } from '../shared/constants/urls';
 import {Ticket} from '../shared/models/Ticket';
 
 
@@ -8,9 +10,9 @@ import {Ticket} from '../shared/models/Ticket';
 })
 export class TicketsService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
-  getAll():Ticket[]{
-    return sample_tickets;
+  getAll(): Observable<Ticket[]>{
+    return this.http.get<Ticket[]>(TICKETS);
   }
 }

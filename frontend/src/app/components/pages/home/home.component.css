@@ -1,0 +1,34 @@
+.ticketlist{
+    width: 80%;
+    display: inline-block;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+    text-align: center;
+    position: relative;
+}
+
+li{
+    height: 100px;
+    width: 600px;
+    background-color: whitesmoke;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.content{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: cornflowerblue;
+    font-size: larger;
+}
+
+
+

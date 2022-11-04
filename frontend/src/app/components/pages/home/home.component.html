@@ -1,11 +1,16 @@
-<ul>
+
+<div class="ticketlist"><ul>
     <li *ngFor="let ticket of tickets">
        <a routerLink="/ticket/{{ticket.id}}">
         <div class="content">
             <div class="description">
                 {{ticket.description}}
             </div>
+            <div class="timeAdded">
+                {{ticket.timeAdded}}
+            </div>
         </div>
        </a>
     </li>
 </ul>
+</div>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { TicketsService } from 'src/app/services/tickets.service';
-import {Ticket} from './app/shared/models/Ticket';
+import {Ticket} from '../../../shared/models/Ticket';
 
 
 @Component({
@@ -10,9 +12,15 @@ import {Ticket} from './app/shared/models/Ticket';
 })
 export class HomeComponent implements OnInit {
 
-  tickets:Ticket[] = []
-  constructor(private ticketService:TicketsService) {
-    this.tickets = ticketService.getAll();
+  tickets: Ticket[] = [];
+  constructor(ticketService: TicketsService, activatedRoute: ActivatedRoute) {
+    let ticketObservable:Observable<Ticket[]>;
+    activatedRoute.params.subscribe((params) => {
+      ticketObservable = ticketService.getAll();
+      ticketObservable.subscribe((serverTickets) => {
+        this.tickets = serverTickets;
+      })
+    })
    }
 
   ngOnInit(): void {

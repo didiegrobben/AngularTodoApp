@@ -1,5 +1,0 @@
-export class Ticket{
-    id!:string;
-    description!:string;
-    user!:string;
-}
